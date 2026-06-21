@@ -1,12 +1,15 @@
-name: Scrape KHB → Supabase
+name: Update KHB plots (daily)
 
 on:
   schedule:
     - cron: "30 3 * * *"   # 03:30 UTC = 09:00 IST daily
-  workflow_dispatch: {}      # allow manual runs from the Actions tab
+  workflow_dispatch: {}      # manual run from the Actions tab
+
+permissions:
+  contents: write            # allow committing the refreshed data
 
 jobs:
-  scrape:
+  refresh:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -15,12 +18,26 @@ jobs:
         with:
           node-version: "22"
 
-      # OCR + PDF tools the scraper needs (same as the local Mac brew installs)
+      # OCR + PDF tools the scraper needs (same as the local brew installs)
       - name: Install poppler + tesseract
         run: sudo apt-get update && sudo apt-get install -y poppler-utils tesseract-ocr
 
-      - name: Run scraper (upsert to Supabase)
+      - name: Refresh data/seed.json from KHB
         env:
+          # If you later add Supabase, set these as repo secrets and the worker
+          # writes to the DB instead. Unset → it writes data/seed.json (default).
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
         run: node worker/scrape.mjs
+
+      - name: Commit updated data if it changed
+        run: |
+          git config user.name "gruha-bot"
+          git config user.email "bot@users.noreply.github.com"
+          if ! git diff --quiet -- data/seed.json; then
+            git add data/seed.json
+            git commit -m "chore: refresh KHB plots $(date -u +%F)"
+            git push
+          else
+            echo "No changes in data/seed.json"
+          fi
