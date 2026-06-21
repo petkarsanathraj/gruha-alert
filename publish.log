@@ -1,0 +1,78 @@
+=== Sun Jun 21 16:05:52 IST 2026 ===
+scraped 16 residential notices (3 open)
+wrote seed -> /Users/santhrajpetkar/Desktop/sanath/gruha-alert/data/seed.json (no SUPABASE_URL/KEY set, dev mode)
+<claude-code-hint v="1" type="plugin" value="vercel@claude-plugins-official" />
+Vercel CLI 54.14.5 (Node.js 23.6.0)
+Retrieving project…
+Deploying sanath-raj-petkar-s-projects/gruha-alert
+Uploading [--------------------] (0.0B/21.4KB)
+Uploading [==============------] (16.0KB/21.4KB)
+Uploading [=================---] (18.6KB/21.4KB)
+Uploading [=================---] (19.0KB/21.4KB)
+Uploading [====================] (21.4KB/21.4KB)
+  Inspect         https://vercel.com/sanath-raj-petkar-s-projects/gruha-alert/9tM3dMC5zG3K1DFH8jib89oMx8bg
+  Production      https://gruha-alert-d3zeyk2np-sanath-raj-petkar-s-projects.vercel.app
+Building…
+=== Sun Jun 21 16:29:24 IST 2026 ===
+scraped 16 residential notices (3 open)
+wrote seed -> /Users/santhrajpetkar/Projects/gruha-alert/data/seed.json (no SUPABASE_URL/KEY set, dev mode)
+Vercel CLI 54.14.5 (Node.js 23.6.0)
+Retrieving project…
+Deploying sanath-raj-petkar-s-projects/gruha-alert
+Uploading [--------------------] (0.0B/20.5KB)
+Uploading [================----] (16.8KB/20.5KB)
+Uploading [==================--] (19.4KB/20.5KB)
+Uploading [====================] (20.5KB/20.5KB)
+  Inspect         https://vercel.com/sanath-raj-petkar-s-projects/gruha-alert/HBuvt5QPr1EgdAi3wxnTUnQ9281Y
+  Production      https://gruha-alert-gsdt1ie8w-sanath-raj-petkar-s-projects.vercel.app
+https://gruha-alert-gsdt1ie8w-sanath-raj-petkar-s-projects.vercel.appBuilding…
+Error: request to https://api.vercel.com/v13/deployments/dpl_HBuvt5QPr1EgdAi3wxnTUnQ9281Y?teamId=team_mNhva4u8HRAMFZ4j6weC7Lgw failed, reason: read ETIMEDOUT
+{
+  "status": "error",
+  "reason": "deploy_failed",
+  "message": "request to https://api.vercel.com/v13/deployments/dpl_9tM3dMC5zG3K1DFH8jib89oMx8bg?teamId=team_mNhva4u8HRAMFZ4j6weC7Lgw failed, reason: read ETIMEDOUT",
+  "next": [
+    {
+      "command": "vercel deploy",
+      "when": "retry deploy"
+    }
+  ]
+}
+Error: request to https://api.vercel.com/v13/deployments/dpl_9tM3dMC5zG3K1DFH8jib89oMx8bg?teamId=team_mNhva4u8HRAMFZ4j6weC7Lgw failed, reason: read ETIMEDOUT
+=== Sun Jun 21 22:50:51 IST 2026 ===
+scraped 16 residential notices (3 open)
+wrote seed -> /Users/santhrajpetkar/Projects/gruha-alert/data/seed.json (no SUPABASE_URL/KEY set, dev mode)
+<claude-code-hint v="1" type="plugin" value="vercel@claude-plugins-official" />
+Vercel CLI 54.14.5 (Node.js 23.6.0)
+Retrieving project…
+Deploying sanath-raj-petkar-s-projects/gruha-alert
+Uploading [--------------------] (0.0B/22KB)
+Uploading [==============------] (16.0KB/22KB)
+Uploading [================----] (18.6KB/22KB)
+Uploading [===================-] (21.1KB/22KB)
+Uploading [====================] (22.0KB/22KB)
+  Inspect         https://vercel.com/sanath-raj-petkar-s-projects/gruha-alert/E4JWTzSbfPoMn2AyFaedKSrZRPnb
+▲ Production      https://gruha-alert-gs364kshv-sanath-raj-petkar-s-projects.vercel.app
+{
+  "status": "ok",
+  "deployment": {
+    "id": "dpl_E4JWTzSbfPoMn2AyFaedKSrZRPnb",
+    "url": "https://gruha-alert-gs364kshv-sanath-raj-petkar-s-projects.vercel.app",
+    "inspectorUrl": "https://vercel.com/sanath-raj-petkar-s-projects/gruha-alert/E4JWTzSbfPoMn2AyFaedKSrZRPnb",
+    "readyState": "BLOCKED",
+    "target": "production",
+    "deploymentApiUrl": "https://api.vercel.com/v13/deployments/dpl_E4JWTzSbfPoMn2AyFaedKSrZRPnb"
+  },
+  "message": "Deployment gruha-alert-gs364kshv-sanath-raj-petkar-s-projects.vercel.app ready.",
+  "next": [
+    {
+      "command": "vercel inspect gruha-alert-gs364kshv-sanath-raj-petkar-s-projects.vercel.app",
+      "when": "Inspect deployment"
+    },
+    {
+      "command": "vercel deploy --prod",
+      "when": "Promote to production"
+    }
+  ]
+}
+deploy submitted OK Sun Jun 21 22:50:57 IST 2026

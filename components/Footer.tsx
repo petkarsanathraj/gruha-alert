@@ -18,6 +18,7 @@ export default function Footer() {
           </div>
           <nav className="grid grid-cols-2 gap-x-10 gap-y-2 text-sm text-slate-600">
             <Link href="/" className="hover:text-emerald-700">Open plots</Link>
+            <Link href="/guides" className="hover:text-emerald-700">Guides</Link>
             <Link href="/about" className="hover:text-emerald-700">How it works</Link>
             <Link href="/privacy" className="hover:text-emerald-700">Privacy</Link>
             <Link href="/disclaimer" className="hover:text-emerald-700">Disclaimer</Link>

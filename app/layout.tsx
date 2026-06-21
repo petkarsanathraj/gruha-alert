@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   keywords: ["KHB plots", "Karnataka Housing Board", "KHB sites", "KHB e-auction", "plots in Karnataka", "Mysore plots", "Bangalore KHB", "KHB allotment"],
   openGraph: { type: "website", siteName: "GruhaAlert", url: SITE_URL },
   robots: { index: true, follow: true },
+  // Google Search Console verification — set GOOGLE_SITE_VERIFICATION in Vercel
+  // to the token Google gives you, then redeploy.
+  ...(process.env.GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } }
+    : {}),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

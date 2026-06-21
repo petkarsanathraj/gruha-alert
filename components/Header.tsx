@@ -12,7 +12,8 @@ export default function Header() {
         </Link>
         <nav className="flex items-center gap-6 text-sm font-medium text-slate-600">
           <Link href="/" className="hover:text-emerald-700">Open plots</Link>
-          <Link href="/about" className="hover:text-emerald-700">How it works</Link>
+          <Link href="/guides" className="hover:text-emerald-700">Guides</Link>
+          <Link href="/about" className="hidden hover:text-emerald-700 sm:inline">About</Link>
           <a href="https://khb.karnataka.gov.in/23/online-application-for-allotment/en"
             target="_blank" rel="noopener noreferrer"
             className="hidden rounded-lg bg-emerald-700 px-3.5 py-1.5 text-white hover:bg-emerald-800 sm:inline-block">
