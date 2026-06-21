@@ -40,4 +40,7 @@ async function main() {
   }
 }
 
-main().catch((e) => { console.error("worker failed:", e.message); process.exit(1); });
+main().catch((e) => {
+  console.error("worker failed:", e.message, "| cause:", e.cause?.code || e.cause?.message || "(none)");
+  process.exit(1);
+});
