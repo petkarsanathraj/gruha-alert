@@ -37,6 +37,13 @@ yarn-error.log*
 # scraper cache (downloaded PDFs + OCR; CI regenerates these)
 /worker/cache/
 
+# Vercel deploy hook URL (secret build trigger — never commit; repo is public)
+.deployhook
+# local run logs
+publish.log
+launchd.out.log
+launchd.err.log
+
 # vercel
 .vercel
 
