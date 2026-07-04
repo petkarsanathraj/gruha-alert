@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GUIDES, getGuide } from "@/lib/guides";
+import { SITE_URL, SITE_NAME, breadcrumbJsonLd } from "@/lib/seo";
 import AdSlot from "@/components/AdSlot";
 
 export const revalidate = 86400;
@@ -16,7 +17,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const g = getGuide(slug);
   if (!g) return { title: "Guide not found" };
-  return { title: g.title, description: g.description, alternates: { canonical: `/guides/${g.slug}` } };
+  return {
+    title: g.title,
+    description: g.description,
+    alternates: { canonical: `/guides/${g.slug}` },
+    openGraph: { title: g.title, description: g.description, type: "article", url: `/guides/${g.slug}` },
+    twitter: { card: "summary_large_image", title: g.title, description: g.description },
+  };
 }
 
 export default async function GuidePage({ params }: Props) {
@@ -24,13 +31,27 @@ export default async function GuidePage({ params }: Props) {
   const g = getGuide(slug);
   if (!g) notFound();
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: g.title,
-    description: g.description,
-    about: "Karnataka Housing Board plot allotment",
-  };
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: g.title,
+      description: g.description,
+      about: "Karnataka Housing Board plot allotment",
+      inLanguage: "en-IN",
+      mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/guides/${g.slug}` },
+      author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+      publisher: {
+        "@type": "Organization",
+        name: SITE_NAME,
+        logo: { "@type": "ImageObject", url: `${SITE_URL}/icon` },
+      },
+    },
+    breadcrumbJsonLd([
+      { name: "Guides", path: "/guides" },
+      { name: g.title, path: `/guides/${g.slug}` },
+    ]),
+  ];
 
   return (
     <article className="mx-auto max-w-3xl px-5 py-10">

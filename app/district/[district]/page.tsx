@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getDistricts, getNoticesByDistrict } from "@/lib/data";
 import { sortNotices, unslugDistrict, slugifyDistrict, MAJOR_DISTRICTS } from "@/lib/format";
+import { SITE_URL, breadcrumbJsonLd } from "@/lib/seo";
 import NoticeCard from "@/components/NoticeCard";
 import AdSlot from "@/components/AdSlot";
 
@@ -21,10 +22,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { district } = await params;
   const name = titleCase(unslugDistrict(district));
   const list = (await getNoticesByDistrict(district)).filter((n) => n.status !== "closed");
+  const title = `KHB Plots in ${name} — Open Sites, e-Auctions & Last Dates`;
+  const description = `Open Karnataka Housing Board plots, sites and e-auctions in ${name} district — with last dates and official links. Updated daily.`;
   return {
-    title: `KHB Plots in ${name}`,
-    description: `Open Karnataka Housing Board plots, sites and e-auctions in ${name} district — with last dates and official links. Updated daily.`,
+    title,
+    description,
+    keywords: [`KHB ${name}`, `KHB plots ${name}`, `${name} sites`, `Karnataka Housing Board ${name}`, `KHB ${name} allotment`],
     alternates: { canonical: `/district/${district}` },
+    openGraph: { title, description, type: "website", url: `/district/${district}` },
+    twitter: { card: "summary_large_image", title, description },
     // don't index empty district pages (thin content) until they have listings
     robots: list.length ? { index: true, follow: true } : { index: false, follow: true },
   };
@@ -38,8 +44,37 @@ export default async function DistrictPage({ params }: Props) {
   // unknown district with no data → 404; known/major district → empty state
   if (open.length === 0 && !majorSlugs.has(district)) notFound();
 
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      name: `KHB plots in ${name}`,
+      description: `Open Karnataka Housing Board plots, sites and e-auctions in ${name} district.`,
+      url: `${SITE_URL}/district/${district}`,
+      ...(open.length
+        ? {
+            mainEntity: {
+              "@type": "ItemList",
+              numberOfItems: open.length,
+              itemListElement: open.map((n, i) => ({
+                "@type": "ListItem",
+                position: i + 1,
+                name: `${n.place} — KHB ${n.type}`,
+                url: `${SITE_URL}/notice/${n.id}`,
+              })),
+            },
+          }
+        : {}),
+    },
+    breadcrumbJsonLd([
+      { name: "Open plots", path: "/" },
+      { name: `${name} district`, path: `/district/${district}` },
+    ]),
+  ];
+
   return (
     <div className="mx-auto max-w-6xl px-5 py-10">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Link href="/"
         className="inline-flex items-center gap-2 rounded-lg border border-stone-300 bg-white px-4 py-2.5 text-base font-semibold text-slate-700 shadow-sm transition hover:border-emerald-400 hover:text-emerald-700">
         <span aria-hidden className="text-lg leading-none">←</span> Back to all plots

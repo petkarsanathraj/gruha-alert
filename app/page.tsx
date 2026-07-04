@@ -1,11 +1,41 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getNotices, getDistricts } from "@/lib/data";
 import { sortNotices } from "@/lib/format";
+import { SITE_URL, faqPageJsonLd } from "@/lib/seo";
 import HomeList from "@/components/HomeList";
 import SubscribeForm from "@/components/SubscribeForm";
 import AdSlot from "@/components/AdSlot";
 
 export const revalidate = 1800;
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  openGraph: { url: SITE_URL },
+};
+
+const HOME_FAQS = [
+  {
+    q: "What is the Karnataka Housing Board (KHB)?",
+    a: "KHB is a Karnataka government board that develops residential layouts across the state and allots sites and houses to the public through applications, a computerised lottery, or e-auctions.",
+  },
+  {
+    q: "How can I check which KHB plots are open to apply for now?",
+    a: "GruhaAlert lists every open KHB residential plot, site and e-auction in one place — with the last date to apply and a direct link to the official notification. The list is updated daily.",
+  },
+  {
+    q: "How do I apply for a KHB site online?",
+    a: "Open the notification for the project, apply on the KHB portal, choose your income category (EWS/LIG/MIG/HIG), and pay the registration fee plus initial deposit before the last date. The deposit is refunded if you are not allotted.",
+  },
+  {
+    q: "Who is eligible for a KHB plot?",
+    a: "Any individual or family who is a resident of Karnataka can apply, under an income category, with ID and income proof. Reservation quotas apply for SC/ST, women, ex-servicemen and other categories.",
+  },
+  {
+    q: "What is the difference between KHB, BDA and MUDA?",
+    a: "KHB allots sites statewide, BDA covers the Bengaluru region and MUDA covers the Mysuru area. The application and lottery process is similar — the jurisdiction differs.",
+  },
+];
 
 export default async function HomePage() {
   const all = await getNotices();
@@ -14,8 +44,25 @@ export default async function HomePage() {
   const openCount = notices.filter((n) => n.status === "open").length;
   const updated = new Date().toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
 
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Open KHB plots & sites in Karnataka",
+      numberOfItems: notices.length,
+      itemListElement: notices.slice(0, 20).map((n, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: `${n.place} — KHB ${n.type}`,
+        url: `${SITE_URL}/notice/${n.id}`,
+      })),
+    },
+    faqPageJsonLd(HOME_FAQS),
+  ];
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* Hero — condensed so listings are visible fast on mobile */}
       <section className="border-b border-stone-200 bg-white">
         <div className="mx-auto max-w-6xl px-4 py-7 sm:px-5 sm:py-12">
@@ -82,6 +129,19 @@ export default async function HomePage() {
             for registered institutions only and are <strong>not</strong> for individuals — we exclude them so you
             only see plots you can actually apply for.
           </p>
+        </section>
+
+        {/* FAQ — targets People-Also-Ask + FAQPage rich results */}
+        <section className="mt-10 rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+          <h2 className="text-xl font-bold text-slate-900">Frequently asked questions</h2>
+          <div className="mt-5 divide-y divide-stone-100">
+            {HOME_FAQS.map((f, i) => (
+              <div key={i} className="py-4 first:pt-0 last:pb-0">
+                <h3 className="text-base font-semibold text-slate-900">{f.q}</h3>
+                <p className="mt-1.5 text-sm leading-6 text-slate-600">{f.a}</p>
+              </div>
+            ))}
+          </div>
         </section>
 
         <p className="mt-8 text-xs leading-5 text-slate-400">

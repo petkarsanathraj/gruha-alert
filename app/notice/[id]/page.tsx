@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getNotice, getNotices } from "@/lib/data";
-import { deadlineLabel, daysLeft, summary, typeExplain } from "@/lib/format";
+import { getNotice, getNotices, getNoticesByDistrict } from "@/lib/data";
+import { deadlineLabel, daysLeft, summary, typeExplain, slugifyDistrict } from "@/lib/format";
+import { noticeTitle, noticeDescription, noticeKeywords, noticeFaq, breadcrumbJsonLd, faqPageJsonLd } from "@/lib/seo";
 import StatusBadge from "@/components/StatusBadge";
+import NoticeCard from "@/components/NoticeCard";
 import AdSlot from "@/components/AdSlot";
 
 export const revalidate = 1800;
@@ -18,10 +20,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const n = await getNotice(id);
   if (!n) return { title: "Notice not found" };
+  const title = noticeTitle(n);
+  const description = noticeDescription(n);
   return {
-    title: `${n.place}, ${n.district} — KHB ${n.type}`,
-    description: `KHB ${n.type} in ${n.place}, ${n.district}. Last date to apply: ${deadlineLabel(n.deadline)}. Official notification, apply dates and how to apply.`,
+    title,
+    description,
+    keywords: noticeKeywords(n),
     alternates: { canonical: `/notice/${n.id}` },
+    openGraph: { title, description, type: "article", url: `/notice/${n.id}` },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 
@@ -31,15 +38,33 @@ export default async function NoticePage({ params }: Props) {
   if (!n) notFound();
 
   const dl = daysLeft(n.deadline);
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "GovernmentService",
-    name: `${n.place} — KHB ${n.type}`,
-    serviceType: "Residential plot allotment",
-    areaServed: { "@type": "AdministrativeArea", name: `${n.district}, Karnataka` },
-    provider: { "@type": "GovernmentOrganization", name: "Karnataka Housing Board" },
-    url: n.pdf_url,
-  };
+  const faqs = noticeFaq(n);
+  const districtSlug = slugifyDistrict(n.district);
+  const related = (await getNoticesByDistrict(districtSlug))
+    .filter((r) => r.id !== n.id && r.status !== "closed")
+    .slice(0, 3);
+
+  const crumbs = [{ name: "Open plots", path: "/" }];
+  if (n.district && n.district !== "Other")
+    crumbs.push({ name: `${n.district} district`, path: `/district/${districtSlug}` });
+  crumbs.push({ name: `${n.place} — KHB ${n.type}`, path: `/notice/${n.id}` });
+
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "GovernmentService",
+      name: `KHB ${n.type} — ${n.place}, ${n.district}`,
+      serviceType: "Residential plot / site allotment",
+      description: summary(n),
+      areaServed: { "@type": "AdministrativeArea", name: `${n.district}, Karnataka` },
+      provider: { "@type": "GovernmentOrganization", name: "Karnataka Housing Board", url: "https://khb.karnataka.gov.in" },
+      audience: { "@type": "Audience", audienceType: "Residents of Karnataka" },
+      url: `/notice/${n.id}`,
+      ...(n.deadline ? { availableChannel: { "@type": "ServiceChannel", serviceUrl: n.apply_url || n.pdf_url } } : {}),
+    },
+    breadcrumbJsonLd(crumbs),
+    faqPageJsonLd(faqs),
+  ];
 
   return (
     <div className="mx-auto max-w-3xl px-5 py-8">
@@ -148,7 +173,32 @@ export default async function NoticePage({ params }: Props) {
         </p>
       </section>
 
-      <p className="mt-6 text-xs leading-5 text-slate-400">
+      {/* FAQ — plain-English answers + FAQPage rich results */}
+      <section className="mt-6 rounded-2xl border border-stone-200 bg-white p-6">
+        <h2 className="text-lg font-bold text-slate-900">Frequently asked questions</h2>
+        <div className="mt-4 divide-y divide-stone-100">
+          {faqs.map((f, i) => (
+            <div key={i} className="py-4 first:pt-0 last:pb-0">
+              <h3 className="text-base font-semibold text-slate-900">{f.q}</h3>
+              <p className="mt-1.5 text-sm leading-6 text-slate-600">{f.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Related plots — internal links + longer sessions */}
+      {related.length > 0 && (
+        <section className="mt-8">
+          <h2 className="text-lg font-bold text-slate-900">
+            More KHB plots in {n.district !== "Other" ? n.district : "Karnataka"}
+          </h2>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {related.map((r) => <NoticeCard key={r.id} notice={r} />)}
+          </div>
+        </section>
+      )}
+
+      <p className="mt-8 text-xs leading-5 text-slate-400">
         GruhaAlert is not affiliated with the Karnataka Housing Board. This page summarises a public notification and
         may contain errors — always confirm every detail on the official PDF and at khb.karnataka.gov.in before applying.
       </p>

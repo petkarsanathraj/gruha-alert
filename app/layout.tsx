@@ -5,6 +5,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { siteJsonLd } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -19,8 +20,9 @@ export const metadata: Metadata = {
   },
   description:
     "Every open Karnataka Housing Board (KHB) residential plot, site, house and e-auction — in plain English, with apply dates and official links. Updated daily.",
-  keywords: ["KHB plots", "Karnataka Housing Board", "KHB sites", "KHB e-auction", "plots in Karnataka", "Mysore plots", "Bangalore KHB", "KHB allotment"],
-  openGraph: { type: "website", siteName: "GruhaAlert", url: SITE_URL },
+  keywords: ["KHB plots", "Karnataka Housing Board", "KHB sites", "KHB e-auction", "plots in Karnataka", "Mysore plots", "Bangalore KHB", "KHB allotment", "KHB allotment 2026", "KHB new layout", "ಕರ್ನಾಟಕ ಗೃಹ ಮಂಡಳಿ"],
+  openGraph: { type: "website", siteName: "GruhaAlert", url: SITE_URL, locale: "en_IN" },
+  twitter: { card: "summary_large_image", title: "GruhaAlert — Open KHB Plots & Sites in Karnataka" },
   robots: { index: true, follow: true },
   // Google Search Console verification — set GOOGLE_SITE_VERIFICATION in Vercel
   // to the token Google gives you, then redeploy.
@@ -39,6 +41,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         )}
       </head>
       <body className="flex min-h-screen flex-col bg-stone-50 font-sans text-slate-800 antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd()) }}
+        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

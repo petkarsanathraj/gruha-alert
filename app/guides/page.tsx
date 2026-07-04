@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GUIDES } from "@/lib/guides";
+import { SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Guides — Understanding KHB plots & allotment",
@@ -9,9 +10,22 @@ export const metadata: Metadata = {
   alternates: { canonical: "/guides" },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "KHB plot & allotment guides",
+  itemListElement: GUIDES.map((g, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: g.title,
+    url: `${SITE_URL}/guides/${g.slug}`,
+  })),
+};
+
 export default function GuidesIndex() {
   return (
     <div className="mx-auto max-w-3xl px-5 py-10">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <h1 className="text-3xl font-bold tracking-tight text-slate-900">Guides</h1>
       <p className="mt-2 text-base text-slate-600">
         Everything you need to understand KHB plots and apply with confidence — in plain English.
