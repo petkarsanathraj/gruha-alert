@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Disclaimer",
   description: "Important notice about GruhaAlert's independence and accuracy of information.",
+  alternates: { canonical: "/disclaimer" },
 };
 
 export default function DisclaimerPage() {

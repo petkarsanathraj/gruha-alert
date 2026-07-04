@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
   description: "What GruhaAlert is, where the data comes from, and how to use it.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
