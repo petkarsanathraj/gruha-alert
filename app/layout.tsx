@@ -24,10 +24,21 @@ export const metadata: Metadata = {
   openGraph: { type: "website", siteName: "GruhaAlert", url: SITE_URL, locale: "en_IN" },
   twitter: { card: "summary_large_image", title: "GruhaAlert — Open KHB Plots & Sites in Karnataka" },
   robots: { index: true, follow: true },
-  // Google Search Console verification — set GOOGLE_SITE_VERIFICATION in Vercel
-  // to the token Google gives you, then redeploy.
-  ...(process.env.GOOGLE_SITE_VERIFICATION
-    ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } }
+  // Search engine verification. Set these env vars in Vercel to the tokens each
+  // console gives you, then redeploy:
+  //   GOOGLE_SITE_VERIFICATION — Google Search Console
+  //   BING_SITE_VERIFICATION   — Bing Webmaster Tools (the msvalidate.01 value)
+  ...((process.env.GOOGLE_SITE_VERIFICATION || process.env.BING_SITE_VERIFICATION)
+    ? {
+        verification: {
+          ...(process.env.GOOGLE_SITE_VERIFICATION
+            ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+            : {}),
+          ...(process.env.BING_SITE_VERIFICATION
+            ? { other: { "msvalidate.01": process.env.BING_SITE_VERIFICATION } }
+            : {}),
+        },
+      }
     : {}),
 };
 
