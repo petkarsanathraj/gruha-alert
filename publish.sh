@@ -6,6 +6,7 @@
 # to this repo, so the push auto-deploys (server-side build with the new data).
 # No flaky `vercel deploy` upload, no deploy hook needed.
 export PATH="/opt/homebrew/bin:$HOME/.nvm/versions/node/v22.22.3/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export INDEXNOW_ENABLED=1   # notify Bing/IndexNow of changed notices after each scrape
 cd "$(dirname "$0")" || exit 1
 
 echo "=== $(date) ===" >> publish.log
