@@ -210,6 +210,95 @@ export const GUIDES: Guide[] = [
       ]},
     ],
   },
+  {
+    slug: "how-khb-e-auction-works",
+    title: "KHB e-auction: how to register, bid and win a site",
+    description:
+      "A plain-English guide to Karnataka Housing Board (KHB) e-auctions — how the online auction works, the upset price, earnest money deposit, and how to bid and win.",
+    intro:
+      "Some KHB sites and houses aren't allotted by lottery — they're sold by online e-auction to the highest bidder. Here's how a KHB e-auction actually works, and how to take part.",
+    sections: [
+      { h: "What a KHB e-auction is", body: [
+        "In an e-auction, KHB sells a developed site or house online to the highest bidder above a fixed 'upset price' (the reserve or minimum price). Unlike the lottery route, there's no income-category application — anyone eligible can bid, and money decides the outcome.",
+        "e-Auctions are announced through official notifications, which list the properties, the upset prices, and the auction schedule.",
+      ]},
+      { h: "Step 1 — Register and pay the EMD", body: [
+        "To bid, you register on the KHB e-auction portal and pay an Earnest Money Deposit (EMD) for each property you want to bid on. The EMD is refunded to unsuccessful bidders as per the notification.",
+        "Registration usually needs your KYC details (ID, PAN) and a bank account for the EMD and refund.",
+      ]},
+      { h: "Step 2 — Bid during the auction window", body: [
+        "During the live auction window you place bids above the upset price. Bids rise in fixed increments, and many auctions auto-extend by a few minutes if a bid comes in near the close, so watch the clock.",
+        "The highest valid bid when the auction closes wins the property.",
+      ]},
+      { h: "Step 3 — Pay and complete the purchase", body: [
+        "If you win, you pay the balance amount within the timeline set in the notification (the EMD is adjusted against the price). KHB then issues the sale/allotment documents and hands over the property after registration.",
+        "Miss the payment deadline and you can forfeit the EMD and the property, so bid only up to what you can actually pay.",
+      ]},
+      { h: "Auction vs lottery — which should you choose?", body: [
+        "Lottery (apply online) gives a chance at a lower, fixed price but no certainty. An e-auction gives certainty if you're the top bidder, but you may pay a market-driven premium. Pick based on your budget and how badly you want a specific site.",
+      ]},
+      { h: "Verify on the official notice", body: [
+        "Upset prices, EMD amounts, increments and timelines are set per auction. Always confirm on the official KHB e-auction notification and portal. GruhaAlert is independent and not affiliated with KHB.",
+      ]},
+    ],
+  },
+  {
+    slug: "khb-site-cost-fees-and-payment",
+    title: "KHB site cost: registration fee, deposit and payment schedule",
+    description:
+      "What it actually costs to get a Karnataka Housing Board (KHB) site — the registration fee, initial deposit, site price and how payment is scheduled.",
+    intro:
+      "How much does a KHB site cost, and when do you pay? The total isn't a single number — it's a registration fee, an initial deposit, and the site price paid over time. Here's how KHB pricing works.",
+    sections: [
+      { h: "1. Registration fee (non-refundable)", body: [
+        "When you apply, you pay a registration/application fee. It's usually small and non-refundable, and it differs by income category (EWS/LIG/MIG/HIG). The exact amount is in the notification.",
+      ]},
+      { h: "2. Initial deposit (refundable if not allotted)", body: [
+        "You also pay an initial deposit with the application. This is a larger sum that shows you're a serious applicant. If you're not allotted a site in the lottery, this deposit is refunded to you as per the notification's terms.",
+      ]},
+      { h: "3. The site price", body: [
+        "The main cost is the site price, based on the site's dimensions and the per-square-foot or per-square-metre rate for that layout and category. Different categories and layouts have very different rates — a small EWS site and a large HIG site are not comparable.",
+        "GruhaAlert links each notice to a local price search so you can sanity-check the area's going rates, but the KHB price for the site itself is set in the notification.",
+      ]},
+      { h: "4. How payment is scheduled", body: [
+        "If allotted, KHB issues an allotment letter with the final price and a payment schedule. The site cost is typically paid in instalments over a set period after allotment, not all at once. Registration, stamp duty and other charges apply at the registration stage.",
+        "Paying instalments on time matters — missing deadlines can attract interest or even cancellation.",
+      ]},
+      { h: "Budgeting tip", body: [
+        "Plan for three buckets: the upfront fee + deposit to apply, the site-price instalments if allotted, and registration/stamp-duty costs at handover. Read the notification's fee table before you apply so there are no surprises.",
+      ]},
+      { h: "Verify the current figures", body: [
+        "Fees, deposits and rates are revised between projects and years. Always confirm the exact amounts on the official KHB notification before applying. GruhaAlert is independent and not affiliated with KHB.",
+      ]},
+    ],
+  },
+  {
+    slug: "khb-reservation-quota-categories",
+    title: "KHB reservations and quotas: SC/ST, women, ex-servicemen and more",
+    description:
+      "How Karnataka Housing Board (KHB) reserves sites for SC/ST, women, ex-servicemen, differently-abled and other categories — and how to claim a reserved quota.",
+    intro:
+      "Alongside income categories, KHB reserves a share of sites for specific groups. If you belong to one, a reservation can improve your chances in the lottery. Here's how KHB reservations work.",
+    sections: [
+      { h: "Reservations sit on top of income categories", body: [
+        "First you apply under an income category — EWS, LIG, MIG or HIG. Within the sites available, KHB then sets aside a percentage for reserved groups. So you can be, say, an LIG applicant claiming an SC reservation.",
+      ]},
+      { h: "Common reserved categories", body: [
+        "KHB notifications commonly reserve sites for: Scheduled Castes (SC) and Scheduled Tribes (ST); Other Backward Classes; women; ex-servicemen and defence personnel; differently-abled persons; and government/state employees. Some projects also reserve for specific local or occupational groups.",
+        "The exact list and the percentage for each are set in each notification.",
+      ]},
+      { h: "How to claim a reservation", body: [
+        "Select the correct reserved category in your online application, and keep the relevant valid certificate ready — a caste certificate, ex-servicemen ID, disability certificate, or the proof named in the notification. Claims without valid proof are usually rejected.",
+        "Make sure certificates are current and in the format KHB asks for.",
+      ]},
+      { h: "How reservations affect the lottery", body: [
+        "Reserved sites are allotted within their quota through the same computerised lottery. Belonging to a reserved group doesn't guarantee a site, but it means you compete within a smaller reserved pool, which can improve your odds.",
+      ]},
+      { h: "Verify on the official notice", body: [
+        "Reserved categories, percentages and required certificates vary by project. Always confirm on the official KHB notification before applying. GruhaAlert is independent and not affiliated with KHB.",
+      ]},
+    ],
+  },
 ];
 
 export const getGuide = (slug: string) => GUIDES.find((g) => g.slug === slug) ?? null;
