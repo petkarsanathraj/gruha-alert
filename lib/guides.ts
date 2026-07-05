@@ -299,6 +299,84 @@ export const GUIDES: Guide[] = [
       ]},
     ],
   },
+  {
+    slug: "is-khb-site-a-good-investment",
+    title: "Is a KHB site a good investment? What to weigh before you apply",
+    description:
+      "The pros, cons and risks of buying a Karnataka Housing Board (KHB) site — pricing, title, location and resale — to help you decide before applying.",
+    intro:
+      "A KHB site can be one of the most affordable ways to own land in Karnataka, but it isn't risk-free. Here's a balanced look at what makes KHB sites attractive and what to check before you apply.",
+    sections: [
+      { h: "Why KHB sites appeal", body: [
+        "Price: KHB allots at government-set rates that are often below open-market prices, especially for EWS/LIG categories. Title: sites come from a government board with a clear allotment trail, which buyers value. Planning: KHB layouts are developed with roads, drainage and civic spaces to approved plans.",
+      ]},
+      { h: "The trade-offs to weigh", body: [
+        "Location: affordable layouts are often on a city's outskirts, so appreciation depends on how the area develops. Timeline: from application to possession can take time, and demand-survey layouts may take longer to actually build. Lock-in: allotments usually come with conditions (e.g. build within a period, restrictions on quick resale) — read them.",
+      ]},
+      { h: "What to check before applying", body: [
+        "Confirm the layout's location and connectivity, the total cost including instalments and registration, the possession timeline, and any resale/holding conditions in the allotment terms. Compare the KHB price against local guidance value and market rates for a reality check.",
+      ]},
+      { h: "Sites vs other options", body: [
+        "A KHB site is land you build on later, on your timeline — versus a ready apartment (immediate use, but shared ownership and maintenance) or a private plot (faster, but usually pricier and needs careful title checks). Choose by your budget, timeline and whether you want to build.",
+      ]},
+      { h: "Invest with eyes open", body: [
+        "Treat a KHB site as a medium-to-long-term hold whose value tracks the area's growth. Apply only within your budget, and never rely on assumed appreciation. This is general information, not financial advice — verify everything on the official KHB notification.",
+      ]},
+    ],
+  },
+  {
+    slug: "khb-home-loan-for-site",
+    title: "KHB home loan: how to finance a KHB site or house",
+    description:
+      "How to fund a Karnataka Housing Board (KHB) site or house with a home/plot loan — what banks look for, and how the allotment letter fits in.",
+    intro:
+      "Not everyone can pay for a KHB site upfront. Many allottees use a bank loan. Here's how financing a KHB site or house typically works.",
+    sections: [
+      { h: "Loan on a site vs a house", body: [
+        "For a KHB house, you can usually get a standard home loan. For a bare site, banks offer a 'plot loan' (also called a land loan) — often with a somewhat higher rate and shorter tenure than a home loan, and sometimes requiring you to start construction within a set period.",
+      ]},
+      { h: "The allotment letter is key", body: [
+        "Banks lend against the allotment: once KHB issues your allotment letter with the price and payment schedule, it becomes the core document for your loan application. Some banks have tie-ups or familiarity with government housing-board allotments, which can smooth approval.",
+      ]},
+      { h: "What lenders typically check", body: [
+        "Your income and repayment capacity, credit score, the allotment documents and price, and the layout's approvals/title. They finance a percentage of the value; you fund the rest as a down payment, plus registration and stamp-duty costs.",
+      ]},
+      { h: "Practical steps", body: [
+        "Get pre-approval based on your income before you commit, so you know your budget. After allotment, submit the allotment letter and your documents, let the bank do its legal/technical check, and align the loan disbursement with KHB's instalment schedule so payments aren't missed.",
+      ]},
+      { h: "Verify current terms", body: [
+        "Loan products, rates and construction conditions vary by bank and change over time, and KHB's payment terms are set per project. Confirm details with your bank and on the official KHB notification. GruhaAlert is independent, not affiliated with KHB, and this is general information, not financial advice.",
+      ]},
+    ],
+  },
+  {
+    slug: "after-khb-allotment-registration-khata-possession",
+    title: "After KHB allotment: payment, registration, khata and possession",
+    description:
+      "What happens after you're allotted a Karnataka Housing Board (KHB) site — completing payment, registration, getting the khata, and taking possession.",
+    intro:
+      "Winning the KHB lottery is the start, not the finish. Here's what happens between the allotment letter and actually holding a registered, buildable site in your name.",
+    sections: [
+      { h: "1. The allotment letter", body: [
+        "KHB issues an allotment letter with the final price, the payment schedule and the conditions. Read it carefully — it's the contract for everything that follows. Note every payment date.",
+      ]},
+      { h: "2. Complete the payments", body: [
+        "Pay the site cost as scheduled — usually in instalments over a set period. Paying on time is critical; delays can attract interest or, in the worst case, cancellation of the allotment.",
+      ]},
+      { h: "3. Registration and stamp duty", body: [
+        "After payment, the site is registered in your name at the sub-registrar's office. You pay stamp duty and registration charges at this stage. This registered sale/allotment deed is your legal proof of ownership.",
+      ]},
+      { h: "4. Khata and possession", body: [
+        "Get the khata (the property record used for paying property tax) transferred to your name with the local authority, using your registration documents. KHB hands over possession of the site, after which you can build as per the layout's rules and approvals.",
+      ]},
+      { h: "5. Keep your paperwork safe", body: [
+        "Preserve the allotment letter, payment receipts, registered deed and khata — you'll need them to build, to get utilities, and if you ever sell. Missing paperwork is the most common cause of trouble later.",
+      ]},
+      { h: "Verify each step officially", body: [
+        "Exact steps, charges and timelines are set in your allotment letter and by local rules. Always follow the official KHB documents and confirm with the relevant offices. GruhaAlert is independent and not affiliated with KHB.",
+      ]},
+    ],
+  },
 ];
 
 export const getGuide = (slug: string) => GUIDES.find((g) => g.slug === slug) ?? null;
