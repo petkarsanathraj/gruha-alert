@@ -4,15 +4,25 @@
 //   node worker/scrape.mjs            -> writes ../data/seed.json (local/dev)
 //   SUPABASE_URL=.. SUPABASE_SERVICE_KEY=.. node worker/scrape.mjs   -> upserts to Supabase
 //
-import { writeFileSync } from "node:fs";
+import { writeFileSync, readFileSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { scrapeAll } from "./lib.mjs";
+import { pingIndexNow, changedUrls } from "./indexnow.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const SEED = join(HERE, "..", "data", "seed.json");
 
+function readSeed() {
+  try {
+    return existsSync(SEED) ? JSON.parse(readFileSync(SEED, "utf8")) : [];
+  } catch {
+    return [];
+  }
+}
+
 async function main() {
+  const prevRecords = readSeed(); // previous state, for the IndexNow diff
   const records = await scrapeAll({ inspect: 40 });
   console.log(`scraped ${records.length} residential notices (${records.filter((r) => r.status === "open").length} open)`);
 
@@ -37,6 +47,16 @@ async function main() {
   } else {
     writeFileSync(SEED, JSON.stringify(records, null, 2));
     console.log(`wrote seed -> ${SEED} (no SUPABASE_URL/KEY set, dev mode)`);
+  }
+
+  // Notify IndexNow (Bing etc.) of added/changed notices. Non-fatal by design:
+  // any failure here must never break the daily scrape+publish.
+  try {
+    const urls = changedUrls(prevRecords, records);
+    const result = await pingIndexNow(urls);
+    if (urls.length) console.log(`IndexNow: ${JSON.stringify(result)}`);
+  } catch (e) {
+    console.warn(`IndexNow step skipped (non-fatal): ${e.message}`);
   }
 }
 
