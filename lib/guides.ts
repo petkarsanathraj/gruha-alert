@@ -123,6 +123,93 @@ export const GUIDES: Guide[] = [
       ]},
     ],
   },
+  {
+    slug: "khb-notifications-latest",
+    title: "KHB notifications 2026: how to find and read the latest notices",
+    description:
+      "Where to find the latest Karnataka Housing Board (KHB) notifications, what each notice means, and how to check the last date to apply — in plain English.",
+    intro:
+      "KHB announces new plots, sites, houses and e-auctions through official notifications. Here's where to find the latest KHB notifications, how to read them, and how to make sure you never miss a last date.",
+    sections: [
+      { h: "Where KHB publishes notifications", body: [
+        "The Karnataka Housing Board publishes official notifications on its website, khb.karnataka.gov.in, and in newspapers. Each notification is a PDF that lists the project, the number and dimensions of sites, the prices, the income categories and the dates to apply.",
+        "GruhaAlert reads every new KHB notification the day it appears and shows the open ones in plain English — with the district, the type of notice and the last date to apply — so you don't have to scan PDFs yourself.",
+      ]},
+      { h: "The main types of KHB notice", body: [
+        "New layout / Apply online — a residential layout is open for online applications; allotment is by computerised lottery.",
+        "Demand survey — KHB is measuring public demand before developing a layout; register your interest so the sites get built.",
+        "e-Auction — developed sites or houses are sold to the highest bidder above a reserve (upset) price.",
+        "Extended — the deadline for an existing layout has been pushed out, so you can still apply before the new last date.",
+      ]},
+      { h: "How to read a KHB notification", body: [
+        "Check four things first: the location (district and layout), the last date to apply, the income category and site sizes on offer, and the fees (registration fee + initial deposit). Everything else in the PDF supports these.",
+        "If any field is unclear on a summary, always open the official PDF — it is the final word on dates, prices and eligibility.",
+      ]},
+      { h: "Never miss a last date", body: [
+        "Deadlines are the thing applicants miss most. On GruhaAlert every open notice shows a 'days left' countdown, and you can browse by your district to see only relevant notices. Bookmark the site and check weekly — new notifications are added daily.",
+      ]},
+      { h: "Always verify on the official notice", body: [
+        "GruhaAlert is an independent information service and is not affiliated with KHB. Dates, prices and rules differ between projects — always confirm on the official KHB notification (PDF) and at khb.karnataka.gov.in before applying.",
+      ]},
+    ],
+  },
+  {
+    slug: "how-to-check-khb-allotment-result-and-status",
+    title: "How to check your KHB allotment result and application status",
+    description:
+      "A plain-English guide to checking your Karnataka Housing Board (KHB) application status and allotment (lottery) result after you apply.",
+    intro:
+      "After you apply for a KHB site, the next question is: did I get it? Here's how the KHB allotment result works, and how to check your application status and lottery outcome.",
+    sections: [
+      { h: "What happens after you apply", body: [
+        "Once the application window closes, KHB verifies the applications and, if applications exceed available sites, holds a computerised lottery to decide allotment. For e-auctions, the outcome is decided by the highest valid bid instead of a lottery.",
+        "KHB announces the lottery date and the result through a public notification and on its portal — GruhaAlert lists these result/lottery notices too.",
+      ]},
+      { h: "How to check your application status", body: [
+        "Log in to the same KHB application portal you used to apply, using your application number and registered mobile/credentials. Your dashboard shows whether your application is received, verified, and its allotment status.",
+        "Keep your application number and payment receipt safe — you'll need them to check status and, if allotted, to complete the next steps.",
+      ]},
+      { h: "How to check the lottery / allotment result", body: [
+        "When the lottery is held, KHB publishes the result — usually a list of selected applicants and a waiting list — as an official notification. Check your name/application number against the published list, and look for a status update or allotment letter in your portal account.",
+        "If you're not selected, your initial deposit is refunded as per the notification's terms.",
+      ]},
+      { h: "If you're allotted a site", body: [
+        "KHB issues an allotment letter with the final price and payment schedule. Pay the instalments on time — missing deadlines can lead to cancellation. After full payment the site is registered in your name and possession is handed over.",
+      ]},
+      { h: "Verify on the official notice", body: [
+        "Exact result dates, portals and steps vary by project. Always confirm on the official KHB notification and at khb.karnataka.gov.in. GruhaAlert is independent and not affiliated with KHB.",
+      ]},
+    ],
+  },
+  {
+    slug: "khb-official-website-and-online-portals",
+    title: "KHB official website and online portals (apply, pay, check status)",
+    description:
+      "The official Karnataka Housing Board (KHB) website and online portals for notifications, applying, paying fees and checking status — and how GruhaAlert helps.",
+    intro:
+      "Looking for the official Karnataka Housing Board website or the KHB application portal? Here are the official KHB online destinations, what each is for, and how GruhaAlert fits in.",
+    sections: [
+      { h: "The official KHB website", body: [
+        "The Karnataka Housing Board's official website is khb.karnataka.gov.in (Karnataka Gruha Mandali / ಕರ್ನಾಟಕ ಗೃಹ ಮಂಡಳಿ). It is the authoritative source for notifications, tenders, contact details and policy.",
+        "Always treat the official website and its notification PDFs as the final word on dates, prices and eligibility.",
+      ]},
+      { h: "Applying online for a site", body: [
+        "KHB accepts applications for open layouts through its online application portal, linked from khb.karnataka.gov.in under 'Online application for allotment'. You register, choose your income category, upload documents and pay the fee online.",
+        "Each notification tells you exactly which portal and form to use for that specific project.",
+      ]},
+      { h: "Paying fees and returning applicants", body: [
+        "Registration fees and deposits are paid through KHB's online e-payment system. Returning applicants log in with their existing credentials to continue or check an earlier application.",
+        "Keep every payment receipt and your application number — you'll need them to check status or claim a refund.",
+      ]},
+      { h: "How GruhaAlert helps", body: [
+        "GruhaAlert is an independent, plain-English companion to the official site — not a replacement for it. We collect every open KHB notification in one place, translate the key details (district, type, last date) into simple language, and link straight to the official PDF and portals so you can act quickly.",
+        "Use GruhaAlert to discover and understand what's open; use the official KHB website and portals to actually apply, pay and check your result.",
+      ]},
+      { h: "A note on trust", body: [
+        "GruhaAlert is not affiliated with the Karnataka Housing Board or any government body, and we never take applications or payments. Always apply and pay only on the official KHB portals, and verify every detail on the official notification first.",
+      ]},
+    ],
+  },
 ];
 
 export const getGuide = (slug: string) => GUIDES.find((g) => g.slug === slug) ?? null;
