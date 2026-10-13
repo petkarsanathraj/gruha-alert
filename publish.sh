@@ -5,9 +5,10 @@
 # Flow: scrape KHB -> commit fresh seed.json -> push to GitHub. Vercel is connected
 # to this repo, so the push auto-deploys (server-side build with the new data).
 # No flaky `vercel deploy` upload, no deploy hook needed.
-export PATH="/opt/homebrew/bin:$HOME/.nvm/versions/node/v22.22.3/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/opt/homebrew/bin:$HOME/.local/node22/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export INDEXNOW_ENABLED=1   # notify Bing/IndexNow of changed notices after each scrape
 cd "$(dirname "$0")" || exit 1
+export NODE_EXTRA_CA_CERTS="$PWD/worker/khb-intermediate.pem"  # KHB's server omits this GlobalSign intermediate cert
 
 echo "=== $(date) ===" >> publish.log
 if ! node worker/scrape.mjs >> publish.log 2>&1; then

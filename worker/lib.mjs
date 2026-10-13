@@ -1,13 +1,14 @@
 // GruhaAlert scraper core — ports the proven khb-watch logic and returns
 // clean, structured records (no side effects). Used by worker/scrape.mjs.
 import { execFileSync } from "node:child_process";
-import { writeFileSync, readFileSync, existsSync } from "node:fs";
+import { writeFileSync, readFileSync, existsSync, mkdirSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const CACHE = join(HERE, "cache");
+mkdirSync(CACHE, { recursive: true });
 
 export const HOMEPAGE = "https://khb.karnataka.gov.in";
 export const APPLY_URL = "https://khb.karnataka.gov.in/23/online-application-for-allotment/en"; // general portal (lists all projects)
@@ -165,7 +166,7 @@ function applyWindow(txt) {
     .map((m) => ({ iso: `${m[3]}-${m[2]}-${m[1]}`, d: new Date(+m[3], +m[2] - 1, +m[1]) }))
     .filter((x) => !isNaN(x.d) && x.d.getFullYear() >= 2024 && x.d.getFullYear() <= 2030)
     .sort((a, b) => a.d - b.d);
-  if (!ds.length) return { start: null, deadline: null };
+  if (ds.length < 2) return { start: null, deadline: null }; // a lone date is usually the notice date, not a last date
   return { start: ds[0].iso, deadline: ds[ds.length - 1].iso };
 }
 
