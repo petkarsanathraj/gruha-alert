@@ -50,3 +50,5 @@ launchd.err.log
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/.last-run

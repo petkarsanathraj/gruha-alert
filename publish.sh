@@ -10,11 +10,17 @@ export INDEXNOW_ENABLED=1   # notify Bing/IndexNow of changed notices after each
 cd "$(dirname "$0")" || exit 1
 export NODE_EXTRA_CA_CERTS="$PWD/worker/khb-intermediate.pem"  # KHB's server omits this GlobalSign intermediate cert
 
+# Runs at login, 9:30 and hourly; only the first successful run after 9:30 each day does work.
+STAMP=.last-run
+[ "$(date +%H%M)" -lt 0930 ] && exit 0
+[ "$(cat $STAMP 2>/dev/null)" = "$(date +%F)" ] && exit 0
+
 echo "=== $(date) ===" >> publish.log
 if ! node worker/scrape.mjs >> publish.log 2>&1; then
   echo "scrape failed, skipping deploy $(date)" >> publish.log
   exit 0
 fi
+date +%F > $STAMP
 
 if git diff --quiet -- data/seed.json; then
   echo "no data change, nothing to deploy $(date)" >> publish.log
