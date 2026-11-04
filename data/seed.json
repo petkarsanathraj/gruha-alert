@@ -1,5 +1,24 @@
 [
   {
+    "id": "dafbaeb8bdcf",
+    "board": "KHB",
+    "district": "Other",
+    "place": "Statewide e-Auction (Round 29)",
+    "type": "e-Auction",
+    "label_en": "E-AUCTION 29 PROCEEDING 02112026 TO 03112026",
+    "title_kn": "ಇ-ಹರಾಜು ಅಧಿಸೂಚನೆ-29, ಸ್ಲಾಟ್-01 ನಡಾವಳಿಗಳು ದಿನಾಂಕ 02-11-2026 ರಿಂದ 03-11-2026 ರವರೆಗೆ. ಅತಿ ಹೆಚ್ಚು ಬಿಡ್‌ ಮಾಡಿರುವ ಬಿಡ್ಡುದಾರರಿಗೆ (ಅಧಿಸೂಚನೆಯನ್ವಯ) 04-11-2026 ಬೆಳಿಗ್ಗೆ 11:00 ರಿಂದ 07-11-2026 ಬೆಳಿಗ್ಗೆ 11:00 ರವರೆಗೆ ಪಾವತಿಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗುತ್ತದೆ.",
+    "start": null,
+    "deadline": null,
+    "status": "unknown",
+    "pdf_url": "https://khb.karnataka.gov.in/uploads/E-AUCTION%2029%20PROCEEDING%2002112026%20TO%2003112026_1793710422.pdf",
+    "apply_url": null,
+    "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Statewide%20e-Auction%20(Round%2029)%2C%20Other%2C%20Karnataka",
+    "price_url": "https://www.google.com/search?q=Statewide%20e-Auction%20(Round%2029)%20Other%20Karnataka%20land%20guidance%20value%20plot%20price",
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
+  },
+  {
     "id": "b06107ecd2ec",
     "board": "KHB",
     "district": "Other",
@@ -15,8 +34,8 @@
     "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Balki%20Kalawadi%2C%20Other%2C%20Karnataka",
     "price_url": "https://www.google.com/search?q=Balki%20Kalawadi%20Other%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
   },
   {
     "id": "0712447e6675",
@@ -34,8 +53,8 @@
     "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Yadagiri%20Houses%2C%20Other%2C%20Karnataka",
     "price_url": "https://www.google.com/search?q=Yadagiri%20Houses%20Other%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
   },
   {
     "id": "15d459b2b16c",
@@ -53,8 +72,8 @@
     "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Statewide%20e-Auction%20(Round%2029)%2C%20Other%2C%20Karnataka",
     "price_url": "https://www.google.com/search?q=Statewide%20e-Auction%20(Round%2029)%20Other%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
   },
   {
     "id": "a4e2089ca6e5",
@@ -72,46 +91,8 @@
     "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Gadag%20Kalasapur%20Phase%202%20Fcfs%20App%2C%20Gadag%2C%20Karnataka",
     "price_url": "https://www.google.com/search?q=Gadag%20Kalasapur%20Phase%202%20Fcfs%20App%20Gadag%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
-  },
-  {
-    "id": "ae9209785f3e",
-    "board": "KHB",
-    "district": "Other",
-    "place": "Statewide e-Auction (Round 28)",
-    "type": "e-Auction",
-    "label_en": "Corrigendum E-Auction 28",
-    "title_kn": "ಇ ಹರಾಜು ಪ್ರಕಟಣೆ-28 ರ ತಿದ್ದುಪಡಿ ಪ್ರಕಟಣೆ.",
-    "start": "2026-08-21",
-    "deadline": "2026-09-03",
-    "status": "closed",
-    "pdf_url": "https://khb.karnataka.gov.in/uploads/Corrigendum%20E-Auction%2028_1788507373.pdf",
-    "apply_url": null,
-    "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
-    "maps_url": "https://www.google.com/maps/search/?api=1&query=Statewide%20e-Auction%20(Round%2028)%2C%20Other%2C%20Karnataka",
-    "price_url": "https://www.google.com/search?q=Statewide%20e-Auction%20(Round%2028)%20Other%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
-  },
-  {
-    "id": "ecec3f22054f",
-    "board": "KHB",
-    "district": "Other",
-    "place": "Statewide e-Auction (Round 28)",
-    "type": "e-Auction",
-    "label_en": "E-Auction -28 dated 21082026",
-    "title_kn": "ಕರ್ನಾಟಕ ಗೃಹ ಮಂಡಳಿಯಿಂದ ಅಭಿವೃದ್ಧಿಪಡಿಸಲಾದ ವಿವಿಧ ಜಿಲ್ಲೆಗಳಲ್ಲಿ ಲಭ್ಯವಿರುವ ಮಧ್ಯಂತರ/ಮೂಲೆ ನಿವೇಶನಗಳು ಮತ್ತು ವಾಣಿಜ್ಯ/ಬ್ಯಾಚುಲರ್‌ ‍ಕ್ವಾರ್ಟರ್ಸ್ ಇ-ಹರಾಜು ಅಧಿಸೂಚನೆ-28 ದಿನಾಂಕ: 21/08/2026.",
-    "start": null,
-    "deadline": null,
-    "status": "closed",
-    "pdf_url": "https://khb.karnataka.gov.in/uploads/E-Auction%20-28%20dated%2021082026_1788253194.pdf",
-    "apply_url": null,
-    "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
-    "maps_url": "https://www.google.com/maps/search/?api=1&query=Statewide%20e-Auction%20(Round%2028)%2C%20Other%2C%20Karnataka",
-    "price_url": "https://www.google.com/search?q=Statewide%20e-Auction%20(Round%2028)%20Other%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
   },
   {
     "id": "9010e0930514",
@@ -129,8 +110,8 @@
     "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Rajapura%2C%20Bangalore%2C%20Karnataka",
     "price_url": "https://www.google.com/search?q=Rajapura%20Bangalore%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
   },
   {
     "id": "b8249727dbad",
@@ -148,8 +129,8 @@
     "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Vijayapura%2C%20Vijayapura%2C%20Karnataka",
     "price_url": "https://www.google.com/search?q=Vijayapura%20Vijayapura%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
   },
   {
     "id": "dbc55f991a6b",
@@ -167,8 +148,8 @@
     "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Halalu-irubanahalli%2C%20Mandya%2C%20Karnataka",
     "price_url": "https://www.google.com/search?q=Halalu-irubanahalli%20Mandya%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
   },
   {
     "id": "b870a5d56d87",
@@ -186,8 +167,8 @@
     "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Mudigere%2C%20Chikkamagaluru%2C%20Karnataka",
     "price_url": "https://www.google.com/search?q=Mudigere%20Chikkamagaluru%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
   },
   {
     "id": "45e4b799ccd7",
@@ -205,8 +186,8 @@
     "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Jagalur%2C%20Davanagere%2C%20Karnataka",
     "price_url": "https://www.google.com/search?q=Jagalur%20Davanagere%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
   },
   {
     "id": "7876bccd5e0a",
@@ -224,8 +205,8 @@
     "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Madikeri%20Pratipati%20JV%2C%20Kodagu%2C%20Karnataka",
     "price_url": "https://www.google.com/search?q=Madikeri%20Pratipati%20JV%20Kodagu%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
   },
   {
     "id": "f354a64bad6d",
@@ -243,8 +224,8 @@
     "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Dharwad%20Sattur%20Phase%204%2C%20Dharwad%2C%20Karnataka",
     "price_url": "https://www.google.com/search?q=Dharwad%20Sattur%20Phase%204%20Dharwad%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
   },
   {
     "id": "0e8f5f6e7a15",
@@ -262,8 +243,8 @@
     "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Khb%20Pratipati%20JV%20JV%2C%20Bangalore%2C%20Karnataka",
     "price_url": "https://www.google.com/search?q=Khb%20Pratipati%20JV%20JV%20Bangalore%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
   },
   {
     "id": "29eb21c278e2",
@@ -281,8 +262,8 @@
     "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Hiremalligewad%20Time%2C%20Dharwad%2C%20Karnataka",
     "price_url": "https://www.google.com/search?q=Hiremalligewad%20Time%20Dharwad%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
   },
   {
     "id": "e8d061319afa",
@@ -300,8 +281,8 @@
     "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Hiremalligewad%20Dharwad%2C%20Dharwad%2C%20Karnataka",
     "price_url": "https://www.google.com/search?q=Hiremalligewad%20Dharwad%20Dharwad%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
   },
   {
     "id": "0f49e99e05e8",
@@ -319,8 +300,8 @@
     "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Koppala%2C%20Koppal%2C%20Karnataka",
     "price_url": "https://www.google.com/search?q=Koppala%20Koppal%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
   },
   {
     "id": "9222d8ac2750",
@@ -338,8 +319,8 @@
     "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Nagamangala%2C%20Mandya%2C%20Karnataka",
     "price_url": "https://www.google.com/search?q=Nagamangala%20Mandya%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
   },
   {
     "id": "208047a7f8dc",
@@ -357,8 +338,8 @@
     "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Kottatti%2C%20Mandya%2C%20Karnataka",
     "price_url": "https://www.google.com/search?q=Kottatti%20Mandya%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
   },
   {
     "id": "68bb10ec115e",
@@ -376,8 +357,8 @@
     "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Panjanahalli%20Phase%203%2C%20Chamarajanagar%2C%20Karnataka",
     "price_url": "https://www.google.com/search?q=Panjanahalli%20Phase%203%20Chamarajanagar%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
   },
   {
     "id": "2ffc438aa2ef",
@@ -395,8 +376,8 @@
     "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Statewide%20e-Auction%20(Round%2027)%2C%20Other%2C%20Karnataka",
     "price_url": "https://www.google.com/search?q=Statewide%20e-Auction%20(Round%2027)%20Other%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
   },
   {
     "id": "eb6471e9d91e",
@@ -414,45 +395,7 @@
     "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
     "maps_url": "https://www.google.com/maps/search/?api=1&query=Kalburgi%2C%20Kalaburagi%2C%20Karnataka",
     "price_url": "https://www.google.com/search?q=Kalburgi%20Kalaburagi%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
-  },
-  {
-    "id": "1b40347c8f9d",
-    "board": "KHB",
-    "district": "Bangalore",
-    "place": "Suryanagar Phase 4",
-    "type": "New layout",
-    "label_en": "SNR PH-IV PUBLIC NOTIFICATION cropped",
-    "title_kn": "ಸೂರ್ಯನಗರ 4ನೇ ಹಂತದ ಯೋಜನೆಯ ಬಗ್ಗೆ ಸಾರ್ವಜನಿಕ ಪ್ರಕಟಣೆ",
-    "start": null,
-    "deadline": null,
-    "status": "closed",
-    "pdf_url": "https://khb.karnataka.gov.in/uploads/SNR%20PH-IV%20PUBLIC%20NOTIFICATION_cropped_1767348723.pdf",
-    "apply_url": null,
-    "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
-    "maps_url": "https://www.google.com/maps/search/?api=1&query=Suryanagar%20Phase%204%2C%20Bangalore%2C%20Karnataka",
-    "price_url": "https://www.google.com/search?q=Suryanagar%20Phase%204%20Bangalore%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
-  },
-  {
-    "id": "f4a06049be3d",
-    "board": "KHB",
-    "district": "Bangalore",
-    "place": "Rajapura",
-    "type": "New layout",
-    "label_en": "RAJAPURA REMAINING SITES NOTIFICATION 04-11-2025",
-    "title_kn": "ಬೆಂಗಳೂರು ನಗರ ಜಿಲ್ಲೆ, ಸೂರ್ಯನಗರ 2ನೇ ಹಂತದ ಮುಂದುವರೆದ ರಾಜಾಪುರ ಬಡಾವಣೆಯಲ್ಲಿ ಹಂಚಿಕೆಯ ನಂತರ ಉಳಿದಿರುವ ನಿವೇಶನಗಳಿಗೆ ಆನ್ಲೈನ್ ಮೂಲಕ ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸಲು ಸಾರ್ವಜನಿಕ ಪ್ರಕಟಣೆ.",
-    "start": "2025-12-04",
-    "deadline": "2025-12-31",
-    "status": "closed",
-    "pdf_url": "https://khb.karnataka.gov.in/uploads/RAJAPURA%20REMAINING%20SITES%20NOTIFICATION%2004-11-2025_1764919977.pdf",
-    "apply_url": null,
-    "oldapp_url": "https://khbepay.com/NEWAPPLICANT/OldApplicant.aspx",
-    "maps_url": "https://www.google.com/maps/search/?api=1&query=Rajapura%2C%20Bangalore%2C%20Karnataka",
-    "price_url": "https://www.google.com/search?q=Rajapura%20Bangalore%20Karnataka%20land%20guidance%20value%20plot%20price",
-    "first_seen": "2026-11-03T04:10:00.425Z",
-    "last_seen": "2026-11-03T04:10:00.425Z"
+    "first_seen": "2026-11-04T07:05:29.122Z",
+    "last_seen": "2026-11-04T07:05:29.122Z"
   }
 ]
